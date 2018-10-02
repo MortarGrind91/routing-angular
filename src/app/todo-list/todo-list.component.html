@@ -1,0 +1,11 @@
+
+<div>
+  <input [(ngModel)] = "newTodo">
+  <button (click)="addNewTodo()">Add</button>
+  <div *ngFor = "let todo of todos; let i = index">
+   {{i+1}} {{todo.id}}. <a routerLink="/todo/{{todo.name}}">{{todo.name}}</a>
+   <button (click)="toggleDone(todo)">{{todo.done ? 'Undone' : 'Done'}}</button>
+   <button (click)="removeTodo(todo.i)">Remove</button>
+   </div>
+</div>
+
